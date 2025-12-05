@@ -75,6 +75,11 @@ body{
     margin: 0 10em;
 }
 
+.secundario2{
+    align-items: center;
+    margin: 0 10em;
+}
+
 .descricao__titulo{
     font-weight: 700;
     font-size: 48px;
@@ -152,4 +157,84 @@ body{
 .container__botao:hover{
     background-color: var(--cor-secundaria);
     color: var(--cor-de-fundo);
+}
+
+/* -------------------------- */
+/*        RESPONSIVIDADE      */
+/* -------------------------- */
+
+@media (max-width: 768px) {
+
+    /* Layout principal */
+    .container {
+        grid-template-columns: 100%;
+        height: auto;
+        padding: 2em 1em;
+        text-align: center;
+    }
+
+    .container__caixa {
+        margin: 0;
+    }
+
+    .container__imagem {
+        width: 80%;
+        margin: 2em auto;
+    }
+
+    .principal {
+        background-size: cover;
+        padding: 2em 1em;
+    }
+
+    /* Seções secundárias */
+    .secundario {
+        margin: 0 2em;
+        display: block;
+        text-align: center;
+        
+    }
+
+    .secundario2 {
+        margin: 0 2em;
+        display: flex;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    .secundario__imagem {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .container__descricao {
+        padding: 1em;
+    }
+
+    /* Textos grandes */
+    .descricao__titulo,
+    .dispositivos__titulos {
+        font-size: 32px;
+    }
+
+    .lista__item {
+        font-size: 20px;
+    }
+
+    /* Lista de dispositivos */
+    .dispositivos__lista {
+        flex-direction: column;
+        gap: 1.5em;
+        margin: 2em 0;
+    }
+
+    /* Rodapé */
+    .rodape {
+        margin: 3em 1.5em;
+    }
+
+    .rodape__lista {
+        flex-direction: column;
+        gap: 1em;
+    }
 }
